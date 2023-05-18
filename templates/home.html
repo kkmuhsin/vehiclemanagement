@@ -1,0 +1,80 @@
+{% load static %}
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'style.css'%}">
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #333;
+  }
+  
+  .active {
+    background-color: #111;
+  }
+  .centered{
+    text-align: center;
+    width: 48%;
+    font-size: 100px;
+    background: #ffffff;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .centere{
+    width: 48%;
+    font-size: 100px;
+    background: #ffffff;
+    position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  </style>
+<body>
+
+<!-- Navigation -->
+<div>
+  <ul>
+    <li><a class="active" href="{% url 'vehicle:home' %}">Home</a></li>
+    <li><a href="{% url 'vehicle:register' %}">Register</a></li>
+    <li><a href="{% url 'vehicle:login' %}">Login</a></li>
+  </ul>
+
+</div>
+
+<!-- Slide Show -->
+<section>
+
+  <img class="mySlides" src="{% static 'image/home.jpg' %}"  style="width:100%">
+  
+</section>
+<div class="centered">VEHICLE </div>
+<div class="centere">MANAGEMENT </div>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>VEHICLE DETAILS</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>VEHICLE NO.</th>
+    <th>VEHICLE TYPE</th>
+    <th>VEHICLE MODEL</th>
+    <th>DISCRIPTION</th>
+  </tr>
+  {% for i in obj %}
+  <tr>
+    <th>{{ i.vehicle_no}}</th>
+    <th>{{ i.vechicle_type}}</th>
+    <th>{{ i.vechicle_model}}</th>
+    <th>{{ i.discription}}</th>
+    <th><a href="{% url 'vehicle:update' i.id %}" >EDIT</a></th>
+    
+  </tr>
+  {% endfor %}
+</table>
+
+
+
+</body>
+</html>
+

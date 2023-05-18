@@ -1,0 +1,4 @@
+super admin url http://127.0.0.1:8000/admin/
+username=super123
+email=super123@gmail.com
+password=super123

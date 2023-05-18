@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+    <h2>details</h2>
+    
+    <form action="{% url 'vehicle:update' ob.id %}" method="post">
+        {% csrf_token %}
+      <label for="fname">vehile no:</label><br>
+      <input type="text" id="fname" name="no" value="{{ob.vehicle_no}}"><br>
+      <label for="lname">vehicle type:</label><br>
+      <input type="text" id="lname" name="type" value="{{ob.vechicle_type}}"><br><br>
+      <label for="lname">vehicle model:</label><br>
+      <input type="text" id="lnam" name="model" value="{{ob.vechicle_model}}"><br><br>
+      <label for="lname">discription:</label><br>
+      <input type="text" id="lna" name="discription" value="{{ob.discription}}"><br><br>
+
+
+
+      <input type="submit" value="Submit">
+    </form> 
+    
+   
+    
+    </body>
+    </html>
+    
+    
+    
+</body>
+</html>
